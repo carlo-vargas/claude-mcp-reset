@@ -42,7 +42,12 @@ ALL_DENIED_MCP=$(jq -c -n \
 FILTERED=$(jq -c -n \
   --argjson s "$ALL_MCP" \
   --argjson d "$ALL_DENIED_MCP" \
-  '($d | unique) as $b | { mcpServers: ($s | with_entries(select([.key] | inside($b) | not))) }'
+  '($d | unique) as $b |
+   ($s | with_entries(select([.key] | inside($b) | not))) as $mcpToInclude |
+   {
+     mcpServers: $mcpToInclude,
+     disabledMcpServers: ($mcpToInclude | keys)
+   }'
 )
 
 if [ -n "$BATS_TEST_TMPDIR" ]; then
