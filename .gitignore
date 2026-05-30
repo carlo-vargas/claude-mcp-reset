@@ -1,0 +1,38 @@
+# Bats testing
+*.tap
+tmp/
+
+# IDEs (VS Code & JetBrains)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Logs, Temporary and swap files
+*.log
+log/
+logs/
+*.tmp
+*.temp
+*.swp
+
+# Environment files
+.env
+.env.*
+
+# Shell history
+.bash_history
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Windows
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+ehthumbs_vista.db

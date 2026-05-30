@@ -1,0 +1,6 @@
+{
+  "deniedMcpServers": [
+    "other-mcp",
+    "remote-notion-wiki"
+  ]
+}

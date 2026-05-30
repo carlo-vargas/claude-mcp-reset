@@ -1,0 +1,6 @@
+{
+  "deniedMcpServers": [
+    "internal-company-api",
+    "python-git-server"
+  ]
+}
